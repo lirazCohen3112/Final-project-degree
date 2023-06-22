@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400dp"
+    android:layout_height="350dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#86153949">
+
+
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/text_Change_name"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:hint="Change name"
+        android:fontFamily="@font/always_good"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_Change_name"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="1dp"
+        android:fontFamily="@font/always_good"
+        android:textSize="18dp"
+        android:textColor="#063BA5"
+        android:text="CHANGE NAME" />
+
+
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/text_Change_email"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:hint="Change email"
+        android:layout_marginTop="150dp"
+        android:layout_marginStart="1dp"
+        android:fontFamily="@font/always_good"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_Change_email"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="210dp"
+        android:layout_marginStart="1dp"
+        android:fontFamily="@font/always_good"
+        android:textSize="18dp"
+        android:textColor="#063BA5"
+        android:text="CHANGE EMAIL" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_closed"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="270dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/always_good"
+        android:textSize="22dp"
+        android:textColor="#063BA5"
+        android:text="CLOSED" />
+
+</RelativeLayout>

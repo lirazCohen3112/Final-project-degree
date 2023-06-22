@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#860B2632"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_b_polish"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="30dp"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="115dp"
+        android:text="ABOUT US"
+        android:textStyle="bold"
+        android:fontFamily="@font/always_good"
+        android:textSize="60dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="350dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginStart="30dp"
+        app:cardCornerRadius="25dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/table_records_LBL_AboutUs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/app_name"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <ImageView
+        android:id="@+id/phone_imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="480dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_local_phone_black_24dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/table_records_LBL_phoneNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="480dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/app_name"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/email_imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="520dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_mail_black_24dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/table_records_LBL_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="520dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/app_name"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+
+</RelativeLayout>

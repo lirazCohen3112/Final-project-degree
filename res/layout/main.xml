@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".businessManager.activities.main">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView1"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_alignParentBottom="true"
+        android:background="#fff"
+        app:menu="@menu/bottom_nav_menu1" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="#fff"
+        android:title=""
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="#fff"
+        android:title=""
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/title_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="0dp"
+        android:src="@drawable/ic_icon_biz" />
+
+    <fragment
+        android:id="@+id/nav_host_fragment1"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/bottomNavigationView1"
+        android:layout_below="@id/toolbar"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph_menu1" />
+
+    <ImageButton
+        android:id="@+id/chat_BTN_chat"
+        android:layout_width="35dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_chat"
+        android:background="@drawable/ic_chat"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp"
+        tools:ignore="MissingConstraints" />
+
+</RelativeLayout>
+

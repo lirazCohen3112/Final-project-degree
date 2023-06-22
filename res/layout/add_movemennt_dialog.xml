@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400dp"
+    android:layout_height="350dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#86153949">
+
+    <TextView
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="100dp"
+        android:fontFamily="@font/always_good"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
+        android:text="New movement"
+        android:textColor="#fff"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <RadioGroup
+        android:id="@+id/movement_RG_typeMovement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="70dp">
+
+        <RadioButton
+            android:id="@+id/movement_OPT_expense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="74dp"
+            android:text="expense"
+            android:textColor="#fff"
+            android:fontFamily="@font/always_good"
+            android:textSize="19sp" />
+
+        <RadioButton
+            android:id="@+id/movement_OPT_revenue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="revenue"
+            android:textColor="#fff"
+            android:fontFamily="@font/always_good"
+            android:textSize="19sp" />
+
+    </RadioGroup>
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/movement_EDT_size"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter size"
+        android:layout_marginTop="120dp"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/movement_EDT_description"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter description"
+        android:layout_marginTop="180dp"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/movement_LBL_add_movement"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="270dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/always_good"
+        android:textSize="20dp"
+        android:textColor="#063BA5"
+        android:text="ADD" />
+
+
+
+
+
+
+</RelativeLayout>

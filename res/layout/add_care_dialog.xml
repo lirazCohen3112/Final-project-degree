@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400dp"
+    android:layout_height="300dp"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#86153949">
+
+
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/dialog_care_name"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter care name"
+        android:fontFamily="@font/always_good"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/dialog_explanation"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter a care description"
+        android:layout_marginTop="70dp"
+        android:fontFamily="@font/always_good"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/dialog_care_cost"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter care cost"
+        android:layout_marginTop="140dp"
+        android:layout_marginStart="1dp"
+        android:fontFamily="@font/always_good"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_add"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="220dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/always_good"
+        android:textSize="20dp"
+        android:textColor="#063BA5"
+        android:text="ADD" />
+
+</RelativeLayout>
