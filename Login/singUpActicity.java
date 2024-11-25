@@ -22,8 +22,11 @@ import com.google.firebase.database.ValueEventListener;
 
 public class singUpActicity extends AppCompatActivity {
 
+    // Firebase database instance and reference
     private FirebaseDatabase database;
     private DatabaseReference myRef;
+
+    // UI components
     private Button singUp_LBL_singUp;
     private TextInputLayout singUp_EDT_name;
     private TextInputLayout singUp_EDT_mail;
@@ -35,24 +38,29 @@ public class singUpActicity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sing_up);
 
+        // Initialize the Firebase database instance
         database = FirebaseDatabase.getInstance();
 
+        // Locate UI components
         findViews();
 
+        // Set the sign-up button's click listener
         singUp_LBL_singUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                // Get user input from the form fields
                 String name = singUp_EDT_name.getEditText().getText().toString();
                 String emailText = singUp_EDT_mail.getEditText().getText().toString();
                 String phoneNumText = singUp_EDT_phoneNum.getEditText().getText().toString();
 
+                 // Validate that required fields are not empty
                 if (emailText.isEmpty() || phoneNumText.isEmpty()) {
                     singUp_LBL_singUp.setError("Age and phone number are required");
 
                 } else {
                     try {
-
+                      // Check if the phone number already exists in the database
                         readData(phoneNumText ,  new Callback() {
                             @Override
                             public void onResult(boolean phoneNumberExists) {
@@ -81,6 +89,7 @@ public class singUpActicity extends AppCompatActivity {
         });
     }
 
+   // Locate and initialize UI components
     private void findViews() {
         singUp_EDT_name = findViewById(R.id.singUp_EDT_name);
         singUp_LBL_singUp = findViewById(R.id.singUp_LBL_singUp);
@@ -88,12 +97,14 @@ public class singUpActicity extends AppCompatActivity {
         singUp_EDT_phoneNum = findViewById(R.id.singUp_EDT_PhoneNum);
     }
 
+    // Navigate to the login page after successful registration
     public void openReturnLoginPageActivity() {
         Intent intent = new Intent(singUpActicity.this, LoginPageActivity.class);
         startActivity(intent);
         finish();
     }
 
+   // Save the new customer's data to the Firebase database
     public void saveData(String name, int phoneNum, String email) {
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference("customers").push();
@@ -108,6 +119,7 @@ public class singUpActicity extends AppCompatActivity {
         // myRef.child("customers").child("" + phoneNum).child("age").setValue(age);
     }
 
+    // Check if a phone number already exists in the database
     public void readData(String phoneNum , final Callback callback) {
 
         DatabaseReference myRef = database.getReference("customers");
@@ -133,6 +145,7 @@ public class singUpActicity extends AppCompatActivity {
         });
     }
 
+    // Callback interface to handle the result of the phone number existence check
     interface Callback {
         void onResult(boolean phoneNumberExists);
     }
